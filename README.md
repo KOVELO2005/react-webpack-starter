@@ -21,13 +21,16 @@
 * @<organizationName/TeamName>
 ```
 
-#### Below is a setting that requires a review to be merged.
+#### Below is a setting that requires a review to be merged
 
 1. Github Setting
 2. Branches Tab
 3. Add rule Button Click
-4. Branch name pattern = \*
+4. Branch name pattern = * 
 5. Check Require a pull request before merging
 6. Check Require approvals
-7. Check Require status checks to pass before merging (Search and select the type of CI you need to pass)
-8. Create
+
+#### For those who do not want to apply the test
+
+1. npm uninstall jest @types/jest
+2. .github/workflows/ci.yml delete - run: yarn test
