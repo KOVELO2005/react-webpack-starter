@@ -17,4 +17,4 @@
 4. Branch name pattern = * 
 5. Check Require a pull request before merging
 6. Check Require approvals
-7. Create
+7. Create 
