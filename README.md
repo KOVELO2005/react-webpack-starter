@@ -1,4 +1,4 @@
-# react-webpack-test
+# react-webpack-starter
 
 <div>
 <img src="https://img.shields.io/badge/react-007396?style=for-the-badge&logo=React&logoColor=white"> 
