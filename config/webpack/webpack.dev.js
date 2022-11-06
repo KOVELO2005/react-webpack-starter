@@ -5,8 +5,10 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
-  output: {
-    filename: 'static/js/build.js',
+  output: {    
+    path: path.resolve(__dirname, 'static/js'),
+    filename: 'build.js',
+    publicPath: '/',
   },
   module: {
     rules: [
