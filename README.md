@@ -14,7 +14,8 @@
 1. Github Setting
 2. Branches Tab
 3. Add rule Button Click
-4. Branch name pattern = * 
+4. Branch name pattern = \*
 5. Check Require a pull request before merging
 6. Check Require approvals
-7. Create  
+7. Check Require status checks to pass before merging (Search and select the type of CI you need to pass)
+8. Create
