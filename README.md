@@ -12,6 +12,26 @@
 <img src="https://img.shields.io/badge/Babel-007396?style=for-the-badge&logo=Babel&logoColor=white"> 
 </div>
 
+## Getting started
+
+1. Create a project based on this boilerplate.
+
+```
+$ npx degit https://github.com/KOVELO2005/react-webpack-starter <project name>
+```
+
+2. install the dependencies.
+
+```
+$ yarn install
+```
+
+3. To build the extension, and rebuild it when the files are changed, run
+
+```
+$ yarn dev
+```
+
 ## How to apply the code review method
 
 ```
