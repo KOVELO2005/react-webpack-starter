@@ -32,5 +32,6 @@
 
 #### For those who do not want to apply the test
 
-1. npm uninstall jest @types/jest
+1. npm uninstall jest @types/jest @testing-library/jest-dom @testing-library/react jest-environment-jsdom jest-transform-stub babel-jest
 2. .github/workflows/ci.yml delete - run: yarn test
+2. config/jest.config.js delete
