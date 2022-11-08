@@ -13,7 +13,7 @@
 </div>
 
 ## Guide
-<a href="https://github.com/KOVELO2005/react-webpack-starter/docs/EN.md">🇺🇸 EN</a> | <a href="https://github.com/KOVELO2005/react-webpack-starter/docs/KO.md">🇰🇷  KO</a>
+<a href="/docs/EN.md">🇺🇸 EN</a> | <a href="/docs/KO.md">🇰🇷  KO</a>
 
 <hr>
 
