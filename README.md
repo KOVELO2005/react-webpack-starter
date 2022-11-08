@@ -6,11 +6,13 @@
 <img src="https://img.shields.io/badge/typescript-007396?style=for-the-badge&logo=typescript&logoColor=white"> 
 <img src="https://img.shields.io/badge/ESLint-007396?style=for-the-badge&logo=ESLint&logoColor=white"> 
 <img src="https://img.shields.io/badge/Prettier-007396?style=for-the-badge&logo=Prettier&logoColor=white"> 
-<img src="https://img.shields.io/badge/Husky-007396?style=for-the-badge&logo=Husky&logoColor=white"> 
+<img src="https://img.shields.io/badge/husky-007396?style=for-the-badge&logo=husky&logoColor=white"> 
 <img src="https://img.shields.io/badge/LintStaged-007396?style=for-the-badge&logo=LintStaged&logoColor=white"> 
 <img src="https://img.shields.io/badge/Webpack-007396?style=for-the-badge&logo=Webpack&logoColor=white"> 
 <img src="https://img.shields.io/badge/Babel-007396?style=for-the-badge&logo=Babel&logoColor=white"> 
 </div>
+## 안내서
+<a href="https://github.com/KOVELO2005/react-webpack-starter/docs/EN.md">🇺🇸 EN</a> | <a href="https://github.com/KOVELO2005/react-webpack-starter/docs/KO.md">🇰🇷  KO</a>
 
 ## Getting started
 
@@ -31,28 +33,3 @@ $ yarn install
 ```
 $ yarn dev
 ```
-<br/>
-
-## How to apply the code review method
-
-```
-.github/CODEOWNERS
-
-* @<GithubName>
-* @<organizationName/TeamName>
-```
-
-#### Below is a setting that requires a review to be merged
-
-1. Github Setting
-2. Branches Tab
-3. Add rule Button Click
-4. Branch name pattern = * 
-5. Check Require a pull request before merging
-6. Check Require approvals
-
-#### For those who do not want to apply the test
-
-1. npm uninstall jest @types/jest @testing-library/jest-dom @testing-library/react jest-environment-jsdom jest-transform-stub babel-jest eslint-plugin-testing-library
-2. .github/workflows/ci.yml delete - run: yarn test
-2. config/jest.config.js delete
