@@ -11,8 +11,11 @@
 <img src="https://img.shields.io/badge/Webpack-007396?style=for-the-badge&logo=Webpack&logoColor=white"> 
 <img src="https://img.shields.io/badge/Babel-007396?style=for-the-badge&logo=Babel&logoColor=white"> 
 </div>
-## 안내서
+
+## Guide
 <a href="https://github.com/KOVELO2005/react-webpack-starter/docs/EN.md">🇺🇸 EN</a> | <a href="https://github.com/KOVELO2005/react-webpack-starter/docs/KO.md">🇰🇷  KO</a>
+
+<hr>
 
 ## Getting started
 
