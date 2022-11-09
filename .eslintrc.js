@@ -1,30 +1,31 @@
 module.exports = {
-  extends: [
-    'prettier',
-    'airbnb',
-    'airbnb-typescript',
-    'airbnb/hooks',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-  ],
   parser: '@typescript-eslint/parser',
-  env: {
-    browser: true,
-    es2021: true,
-    jest: true,
-  },
-  plugins: [
+  plugins: ['@typescript-eslint', 'testing-library', 'prettier'],
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
     'prettier',
-    'react',
-    '@typescript-eslint',
-    'testing-library',
-    'react-hooks',
   ],
+  rules: {
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-pascal-case': 0,
+    '@typescript-eslint/naming-convention': 'off',
+    'no-underscore-dangle': 'off',
+  },
   parserOptions: {
-    tsconfigRootDir: __dirname,
-    sourceType: 'module',
     project: './tsconfig.json',
   },
-  rules: { 'react/react-in-jsx-scope': 'off' },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
   ignorePatterns: ['node_modules/', 'build', '**/*.js', 'setupTests.ts'],
 };
