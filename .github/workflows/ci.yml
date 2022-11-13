@@ -24,7 +24,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
+          
+      - name: Generate Environment Variables File for Production
+        env:
+          REACT_APP_DOMAIN: ${{ secrets.your_key }}
+        run: |
+          echo "your_key=$your_key" >> .env
+          
       - run: yarn install
-      - run: yarn lint
-      - run: yarn test
       - run: yarn build
+      - run: yarn test
+      - run: yarn lint

@@ -1,5 +1,1 @@
-function App() {
-  return <div>Hello Hell</div>;
-}
-
-export default App;
+export const App = () => <div>Hello Hello</div>;
