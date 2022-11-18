@@ -48,6 +48,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
 
       - name: Install Dependencies
         run: yarn --immutable --immutable-cache --check-cache
@@ -58,6 +64,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
 
       - name: Install Dependencies
         run: yarn --immutable --immutable-cache --check-cache
