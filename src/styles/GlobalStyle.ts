@@ -10,7 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     outline: unset;
     list-style: none;
     font-style: normal;
-    font-family: 'Noto Sans', sans-serif;
   }
   button,
   label {
