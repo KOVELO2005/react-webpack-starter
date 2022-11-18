@@ -21,13 +21,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16, 18]
     steps:
-      - strategy:
-          matrix:
-            node-version: [18.x]
-
       - uses: actions/checkout@v3
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -41,13 +39,13 @@ jobs:
           echo "your_key=$your_key" >> .env
 
       - name: Install Dependencies
-      - run: yarn --immutable --immutable-cache --check-cache
+        run: yarn --immutable --immutable-cache --check-cache
 
       - name: Lint Test
-      - run: yarn lint
+        run: yarn lint
 
       - name: Unit Test
-      - run: yarn test
+        run: yarn test
 
       - name: Build Packages
         run: yarn build
