@@ -24,8 +24,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18]
-        lint: ['lint']
-        test: ['test']
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -43,11 +42,25 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable --immutable-cache --check-cache
 
-      - name: Lint Test
-        run: yarn ${{ matrix.lint }}
-
       - name: Unit Test
-        run: yarn ${{ matrix.test }}
+        run: yarn test
 
       - name: Build Packages
         run: yarn build
+        
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+
+      - name: Generate Environment Variables File for Production
+        env:
+          REACT_APP_DOMAIN: ${{ secrets.your_key }}
+        run: |
+          echo "your_key=$your_key" >> .env
+
+      - name: Lint Test
+        run: yarn lint
