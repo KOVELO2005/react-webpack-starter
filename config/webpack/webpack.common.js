@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const env = getClientEnvironment(paths.publicUrlOrPath.slice(0, -1));
 
@@ -45,7 +46,18 @@ module.exports = {
       filename: 'index.html',
       inject: true,
       templateParameters: env.raw,
-    }), 
+    }),     
+    new CopyPlugin({
+      patterns: [
+        {
+          from: paths.appPublic,
+          to: '.',
+          globOptions: {
+            ignore: ['*/**/index.html'],
+          },
+        },
+      ],
+    }),
     new webpack.DefinePlugin(env.stringified),
   ],
 
